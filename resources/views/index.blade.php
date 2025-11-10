@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aloflux - Technology solutions for African markets. Offline-first architectures, enterprise automation, and AI solutions for SMEs in low-connectivity environments.">
     <title>Aloflux - Technology Solutions for African Markets</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -34,9 +36,7 @@
                     </a>
                 </div>
                 <button id="mobile-menu-button" class="lg:hidden text-gray-700 p-2">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
+                    <i class='bx bx-menu text-2xl'></i>
                 </button>
             </div>
         </div>
@@ -59,9 +59,7 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <div class="inline-flex items-center gap-2 text-[#FF6D00] text-sm font-semibold mb-4">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
+                        <i class='bx bx-check-circle text-lg'></i>
                         <span>Elevate Your Business With Us</span>
                     </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -73,15 +71,11 @@
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#services" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#1A1A1A] text-white rounded-lg font-semibold hover:bg-[#E55A00] transition-colors">
                             Explore More
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
+                            <i class='bx bx-right-arrow-alt text-xl'></i>
                         </a>
                         <a href="#services" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-gray-900 border-2 border-gray-300 rounded-lg font-semibold hover:border-[#1A1A1A] hover:text-[#1A1A1A] transition-colors">
                             View All Services
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
+                            <i class='bx bx-right-arrow-alt text-xl'></i>
                         </a>
                     </div>
                 </div>
@@ -95,11 +89,6 @@
                             <div class="bg-gray-200 rounded-lg aspect-square"></div>
                             <div class="bg-gray-200 rounded-lg aspect-square"></div>
                         </div>
-                    </div>
-                    <div class="absolute top-1/2 right-0 text-[#FF6D00]">
-                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
                     </div>
                 </div>
             </div>
@@ -153,9 +142,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="mb-12">
                 <div class="inline-flex items-center gap-2 text-[#FF6D00] text-sm font-semibold mb-4">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
+                    <i class='bx bx-check-circle text-lg'></i>
                     <span>About Us</span>
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -164,10 +151,14 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-start">
-                <div class="space-y-4">
-                    <div class="bg-gray-200 rounded-lg aspect-[4/3]"></div>
-                    <div class="relative">
-                        <div class="bg-gray-200 rounded-lg aspect-[4/3]"></div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="bg-gray-200 rounded-lg aspect-[4/3] w-full"></div>
+                        <div class="bg-gray-200 rounded-lg aspect-square w-full"></div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="bg-gray-200 rounded-lg aspect-square w-full"></div>
+                        <div class="bg-gray-200 rounded-lg aspect-[4/3] w-full"></div>
                     </div>
                 </div>
 
@@ -209,9 +200,7 @@
 
                     <a href="#about" class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#1A1A1A] text-white rounded-lg font-semibold hover:bg-[#E55A00] transition-colors">
                         About Us
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
+                        <i class='bx bx-right-arrow-alt text-xl'></i>
                     </a>
                 </div>
             </div>
@@ -220,36 +209,28 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-gray-200">
                 <div class="text-center">
                     <div class="w-16 h-16 bg-[#FF6D00]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-[#FF6D00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                        <i class='bx bx-check-circle text-4xl text-[#FF6D00]'></i>
                     </div>
                     <div class="text-4xl font-bold text-[#1A1A1A] mb-2">500+</div>
                     <div class="text-gray-600 font-medium">Successful Projects</div>
                 </div>
                 <div class="text-center">
                     <div class="w-16 h-16 bg-[#FF6D00]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-[#FF6D00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
+                        <i class='bx bx-group text-4xl text-[#FF6D00]'></i>
                     </div>
                     <div class="text-4xl font-bold text-[#1A1A1A] mb-2">50+</div>
                     <div class="text-gray-600 font-medium">Expert Team</div>
                 </div>
                 <div class="text-center">
                     <div class="w-16 h-16 bg-[#FF6D00]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-[#FF6D00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                        <i class='bx bx-happy text-4xl text-[#FF6D00]'></i>
                     </div>
                     <div class="text-4xl font-bold text-[#1A1A1A] mb-2">300+</div>
                     <div class="text-gray-600 font-medium">Happy Customers</div>
                 </div>
                 <div class="text-center">
                     <div class="w-16 h-16 bg-[#FF6D00]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-[#FF6D00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                        <i class='bx bx-time text-4xl text-[#FF6D00]'></i>
                     </div>
                     <div class="text-4xl font-bold text-[#1A1A1A] mb-2">8+</div>
                     <div class="text-gray-600 font-medium">Years of Experience</div>
@@ -264,9 +245,7 @@
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
                 <div>
                     <div class="inline-flex items-center gap-2 text-[#FF6D00] text-sm font-semibold mb-4">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
+                        <i class='bx bx-check-circle text-lg'></i>
                         <span>Our Services</span>
                     </div>
                     <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -275,9 +254,7 @@
                 </div>
                 <a href="#services" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors mt-4 md:mt-0">
                     View All Services
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
+                    <i class='bx bx-right-arrow-alt text-xl'></i>
                 </a>
             </div>
 
@@ -285,9 +262,7 @@
                 <!-- Service 1 -->
                 <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                     <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-[#FF6D00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                        </svg>
+                        <i class='bx bx-shield text-4xl text-[#FF6D00]'></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Offline-First Development</h3>
                     <p class="text-gray-600 mb-6 text-sm leading-relaxed">
@@ -295,18 +270,14 @@
                     </p>
                     <a href="#" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
                         Learn more
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
+                        <i class='bx bx-right-arrow-alt text-lg'></i>
                     </a>
                 </div>
 
                 <!-- Service 2 -->
                 <div class="bg-[#FF6D00] rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                     <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
+                        <i class='bx bx-bolt text-4xl text-white'></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Enterprise Automation</h3>
                     <p class="mb-6 text-sm leading-relaxed text-white/90">
@@ -314,18 +285,14 @@
                     </p>
                     <a href="#" class="font-semibold text-sm text-white inline-flex items-center gap-1 hover:underline">
                         Learn more
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
+                        <i class='bx bx-right-arrow-alt text-lg'></i>
                     </a>
                 </div>
 
                 <!-- Service 3 -->
                 <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                     <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-[#FF6D00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
+                        <i class='bx bx-brain text-4xl text-[#FF6D00]'></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">AI Solutions</h3>
                     <p class="text-gray-600 mb-6 text-sm leading-relaxed">
@@ -333,18 +300,14 @@
                     </p>
                     <a href="#" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
                         Learn more
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
+                        <i class='bx bx-right-arrow-alt text-lg'></i>
                     </a>
                 </div>
 
                 <!-- Service 4 -->
                 <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                     <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-[#FF6D00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
+                        <i class='bx bx-file-blank text-4xl text-[#FF6D00]'></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Technology Consulting</h3>
                     <p class="text-gray-600 mb-6 text-sm leading-relaxed">
@@ -352,11 +315,83 @@
                     </p>
                     <a href="#" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
                         Learn more
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
+                        <i class='bx bx-right-arrow-alt text-lg'></i>
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-[#FF6D00] text-sm font-semibold mb-4">
+                        <i class='bx bx-check-circle text-lg'></i>
+                        <span>Our Projects</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                        Showcasing Our Success Stories
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl">
+                        Explore some of our recent projects that have transformed businesses across African markets with innovative technology solutions.
+                    </p>
+                </div>
+            </div>
+
+            @php
+                $projects = [
+                    [
+                        'icon' => 'bx-book-reader',
+                        'title' => 'School Management System',
+                        'description' => 'A comprehensive school management system designed to streamline administrative tasks, student records, academic performance tracking, and communication between teachers, students, and parents.',
+                        'tags' => [
+                            ['label' => 'Education', 'highlight' => true],
+                            ['label' => 'Management System', 'highlight' => false],
+                        ],
+                        'link' => '#',
+                    ],
+                    [
+                        'icon' => 'bx-pen',
+                        'title' => 'Versefountain',
+                        'description' => 'A vibrant platform for creatives, writers, readers, and poets to share their work, discover new content, and connect with a community of literary enthusiasts. Features include publishing tools, reading lists, and interactive engagement.',
+                        'tags' => [
+                            ['label' => 'Creative Platform', 'highlight' => true],
+                            ['label' => 'Social Network', 'highlight' => false],
+                        ],
+                        'link' => 'https://versefountain.com',
+                    ],
+                ];
+            @endphp
+
+            <div class="grid md:grid-cols-2 gap-8">
+                @foreach ($projects as $project)
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 group">
+                        <div class="p-6">
+                            <div class="w-12 h-12 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-4">
+                                <i class='bx {{ $project['icon'] }} text-3xl text-[#FF6D00]'></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">{{ $project['title'] }}</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                                {{ $project['description'] }}
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                @foreach ($project['tags'] as $tag)
+                                    @if ($tag['highlight'])
+                                        <span class="px-3 py-1 bg-[#FF6D00]/10 text-[#FF6D00] text-xs font-semibold rounded-full">{{ $tag['label'] }}</span>
+                                    @else
+                                        <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded-full">{{ $tag['label'] }}</span>
+                                    @endif
+                                @endforeach
+                            </div>
+                            <a href="{{ $project['link'] }}" target="_blank" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
+                                View Project
+                                <i class='bx bx-right-arrow-alt text-lg'></i>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -366,9 +401,7 @@
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
                 <div class="inline-flex items-center gap-2 text-[#FF6D00] text-sm font-semibold mb-4">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
+                    <i class='bx bx-check-circle text-lg'></i>
                     <span>Get in Touch</span>
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -385,23 +418,23 @@
                         <div>
                             <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
                             <input type="text" id="name" name="name" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF6D00] focus:border-[#FF6D00] transition-all duration-200">
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
                             <input type="email" id="email" name="email" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF6D00] focus:border-[#FF6D00] transition-all duration-200">
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200">
                         </div>
                     </div>
                     <div>
                         <label for="company" class="block text-sm font-semibold text-gray-700 mb-2">Company</label>
                         <input type="text" id="company" name="company"
-                            class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF6D00] focus:border-[#FF6D00] transition-all duration-200">
+                            class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200">
                     </div>
                     <div>
                         <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
                         <textarea id="message" name="message" rows="5" required
-                            class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF6D00] focus:border-[#FF6D00] transition-all duration-200 resize-none"></textarea>
+                            class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200 resize-none"></textarea>
                     </div>
                     <button type="submit"
                         class="w-full px-8 py-4 bg-[#1A1A1A] text-white rounded-lg font-semibold hover:bg-[#E55A00] transition-colors shadow-lg">
@@ -440,15 +473,11 @@
                     <h4 class="text-lg font-bold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-300">
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
+                            <i class='bx bx-envelope text-lg'></i>
                             info@aloflux.com
                         </li>
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                            </svg>
+                            <i class='bx bx-phone text-lg'></i>
                             <a href="tel:+256758831249" class="hover:text-[#FF6D00] transition-colors">+256 758 831249</a>
                         </li>
                     </ul>
