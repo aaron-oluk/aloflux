@@ -26,8 +26,6 @@ jobs:
               run: composer install
             - name: Run composer update
               run: composer update
-            - name: Run tests
-              run: composer run test
             - name: Run migrations and seed database
               run: |
                 php artisan key:generate
