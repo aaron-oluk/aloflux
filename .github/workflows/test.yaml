@@ -20,4 +20,6 @@ jobs:
             - name: Build
               run: npm run build
             - name: Run PHP tests
-              run: composer test
+              run: composer install
+            - name: Run composer update
+              run: composer update
