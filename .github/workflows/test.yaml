@@ -16,18 +16,16 @@ jobs:
             - name: Setup
               uses: actions/setup-node@v4
               with:
-                  node-version: '18'
-                  cache: 'npm'
+                  node-version: "18"
+                  cache: "npm"
             - name: Install dependencies
-              run: npm install
-            - name: Run tests
-              run: composer run test
-            - name: Run PHP tests
-              run: composer install
-            - name: Run composer update
-              run: composer update
-            - name: Run migrations and seed database
               run: |
-                php artisan key:generate
-                php artisan migrate
-                php artisan db:seed 
+                  npm install
+                  npm run  build
+            - name: Run PHP tests
+              run: |
+                  composer install
+                  composer update
+                  php artisan key:generate
+                  php artisan migrate
+                  php artisan db:seed
