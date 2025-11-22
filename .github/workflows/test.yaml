@@ -30,12 +30,10 @@ jobs:
                 coverage: none
             - name: Add env files
               run: cp .env.example .env
-            - name: Generate app key
-              run: php artisan key:generate
-            - name: Run PHP tests
+            - name: Run PHP Laravel setup and tests
               run: |
                 composer install
-                composer update
+                php artisan key:generate
                 php artisan migrate
                 php artisan db:seed
                 composer run test
