@@ -23,7 +23,7 @@ jobs:
                   npm install
                   npm run  build
             - name: Run PHP Laravel setup
-              uses: laravel/actions/setup-laravel@v3
+              uses: shivammathur/setup-php@v2
               with:
                 php-version: '8.2'
                 extensions: mbstring, curl, dom, fileinfo, json, mbstring, openssl, pdo, tokenizer
