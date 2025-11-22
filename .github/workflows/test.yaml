@@ -16,7 +16,7 @@ jobs:
             - name: Setup
               uses: actions/setup-node@v4
               with:
-                  node-version: "18"
+                  node-version: "20"
                   cache: "npm"
             - name: Install dependencies
               run: |
@@ -29,4 +29,10 @@ jobs:
                 extensions: mbstring, curl, dom, fileinfo, json, mbstring, openssl, pdo, tokenizer
                 coverage: none
             - name: Run PHP tests
-              run: composer run test
+              run: |
+                composer install
+                php artisan key:generate
+                php artisan migrate
+                php artisan db:seed
+                php artisan config:clear
+                composer run test
