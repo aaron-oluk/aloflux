@@ -8,6 +8,9 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        concurrency:
+            group: ${{ github.workflow }}-${{ github.ref }}
+            cancel-in-progress: true
         steps:
             - uses: actions/checkout@v4
             - name: Setup
@@ -17,9 +20,16 @@ jobs:
                   cache: 'npm'
             - name: Install dependencies
               run: npm install
-            - name: Build
-              run: npm run build
+            - name: Run tests
+              run: composer run test
             - name: Run PHP tests
               run: composer install
             - name: Run composer update
               run: composer update
+            - name: Run tests
+              run: composer run test
+            - name: Run migrations and seed database
+              run: |
+                php artisan key:generate
+                php artisan migrate
+                php artisan db:seed 
