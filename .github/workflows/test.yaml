@@ -28,11 +28,14 @@ jobs:
                 php-version: '8.2'
                 extensions: mbstring, curl, dom, fileinfo, json, mbstring, openssl, pdo, tokenizer
                 coverage: none
+            - name: Add env files
+              run: cp .env.example .env
+            - name: Generate app key
+              run: php artisan key:generate
             - name: Run PHP tests
               run: |
                 composer install
-                php artisan key:generate
+                composer update
                 php artisan migrate
                 php artisan db:seed
-                php artisan config:clear
                 composer run test
