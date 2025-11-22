@@ -22,10 +22,11 @@ jobs:
               run: |
                   npm install
                   npm run  build
+            - name: Run PHP Laravel setup
+              uses: laravel/actions/setup-laravel@v3
+              with:
+                php-version: '8.2'
+                extensions: mbstring, curl, dom, fileinfo, json, mbstring, openssl, pdo, tokenizer
+                coverage: none
             - name: Run PHP tests
-              run: |
-                  composer install
-                  composer update
-                  php artisan key:generate
-                  php artisan migrate
-                  php artisan db:seed
+              run: composer run test
