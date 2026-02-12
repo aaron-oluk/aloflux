@@ -350,7 +350,7 @@
                             ['label' => 'Education', 'highlight' => true],
                             ['label' => 'Management System', 'highlight' => false],
                         ],
-                        'link' => '#',
+                        'link' => 'https://schoolms.aloflux.com/',
                     ],
                     [
                         'icon' => 'bx-pen',
