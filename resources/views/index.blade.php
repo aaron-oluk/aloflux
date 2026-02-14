@@ -58,8 +58,8 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <div class="inline-flex items-center gap-2 text-[#FF6D00] text-sm font-semibold mb-4">
-                        <i class='bx bx-check-circle text-lg'></i>
+                    <div class="inline-flex items-center gap-2 text-[#FF6D00] text-base md:text-lg font-bold mb-4 tracking-wide uppercase">
+                        <i class='bx bx-check-circle text-xl'></i>
                         <span>Elevate Your Business With Us</span>
                     </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -82,12 +82,12 @@
                 <div class="relative">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="space-y-4">
-                            <div class="bg-gray-200 rounded-lg aspect-square"></div>
-                            <div class="bg-gray-200 rounded-lg aspect-square"></div>
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=400&fit=crop" alt="Team collaboration" class="rounded-lg aspect-square object-cover w-full">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=400&fit=crop" alt="Business meeting" class="rounded-lg aspect-square object-cover w-full">
                         </div>
                         <div class="space-y-4 pt-8">
-                            <div class="bg-gray-200 rounded-lg aspect-square"></div>
-                            <div class="bg-gray-200 rounded-lg aspect-square"></div>
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=400&fit=crop" alt="Technology solutions" class="rounded-lg aspect-square object-cover w-full">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop" alt="Digital workspace" class="rounded-lg aspect-square object-cover w-full">
                         </div>
                     </div>
                 </div>
@@ -153,12 +153,12 @@
             <div class="grid md:grid-cols-2 gap-12 items-start">
                 <div class="grid grid-cols-2 gap-4">
                     <div class="space-y-4">
-                        <div class="bg-gray-200 rounded-lg aspect-[4/3] w-full"></div>
-                        <div class="bg-gray-200 rounded-lg aspect-square w-full"></div>
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop" alt="Our team at work" class="rounded-lg aspect-[4/3] object-cover w-full">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop" alt="Team planning session" class="rounded-lg aspect-square object-cover w-full">
                     </div>
                     <div class="space-y-4 pt-8">
-                        <div class="bg-gray-200 rounded-lg aspect-square w-full"></div>
-                        <div class="bg-gray-200 rounded-lg aspect-[4/3] w-full"></div>
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=400&fit=crop" alt="Office environment" class="rounded-lg aspect-square object-cover w-full">
+                        <img src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=400&h=300&fit=crop" alt="Innovation and technology" class="rounded-lg aspect-[4/3] object-cover w-full">
                     </div>
                 </div>
 
@@ -198,14 +198,14 @@
                         </div>
                     </div>
 
-                    <a href="#about" class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#1A1A1A] text-white rounded-lg font-semibold hover:bg-[#E55A00] transition-colors">
+                    <a href="/about" class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#1A1A1A] text-white rounded-lg font-semibold hover:bg-[#E55A00] transition-colors">
                         About Us
                         <i class='bx bx-right-arrow-alt text-xl'></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Statistics -->
+            {{-- Statistics - commented out
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-gray-200">
                 <div class="text-center">
                     <div class="w-16 h-16 bg-[#FF6D00]/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -236,6 +236,7 @@
                     <div class="text-gray-600 font-medium">Years of Experience</div>
                 </div>
             </div>
+            --}}
         </div>
     </section>
 
@@ -252,68 +253,128 @@
                         Boost Your Brand with Our Expertise
                     </h2>
                 </div>
-                <a href="#services" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors mt-4 md:mt-0">
+                <a href="#" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'}); return false;" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors mt-4 md:mt-0">
                     View All Services
                     <i class='bx bx-right-arrow-alt text-xl'></i>
                 </a>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Service 1 -->
-                <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class='bx bx-shield text-4xl text-[#FF6D00]'></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Offline-First Development</h3>
-                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                        We design and develop software with cleaner, offline-first architectures specifically tailored for African markets.
-                    </p>
-                    <a href="#" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
-                        Learn more
-                        <i class='bx bx-right-arrow-alt text-lg'></i>
-                    </a>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="bg-[#FF6D00] rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class='bx bx-bolt text-4xl text-white'></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Enterprise Automation</h3>
-                    <p class="mb-6 text-sm leading-relaxed text-white/90">
-                        Custom enterprise workflow automation and AI solutions for SMEs in low-connectivity environments.
-                    </p>
-                    <a href="#" class="font-semibold text-sm text-white inline-flex items-center gap-1 hover:underline">
-                        Learn more
-                        <i class='bx bx-right-arrow-alt text-lg'></i>
-                    </a>
-                </div>
-
-                <!-- Service 3 -->
+                <!-- Service 1: AI Solutions -->
                 <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                     <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
                         <i class='bx bx-brain text-4xl text-[#FF6D00]'></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">AI Solutions</h3>
                     <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                        AI-powered solutions designed to help businesses streamline operations and boost productivity.
+                        AI-powered solutions designed to help businesses streamline operations and boost productivity with intelligent automation.
                     </p>
-                    <a href="#" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
+                    <a href="/services/ai-solutions" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
                         Learn more
                         <i class='bx bx-right-arrow-alt text-lg'></i>
                     </a>
                 </div>
 
-                <!-- Service 4 -->
+                <!-- Service 2: Offline-First Development -->
+                <div class="bg-[#FF6D00] rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class='bx bx-shield text-4xl text-white'></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Offline-First Development</h3>
+                    <p class="mb-6 text-sm leading-relaxed text-white/90">
+                        We design and develop software with cleaner, offline-first architectures specifically tailored for African markets.
+                    </p>
+                    <a href="/services/offline-first-development" class="font-semibold text-sm text-white inline-flex items-center gap-1 hover:underline">
+                        Learn more
+                        <i class='bx bx-right-arrow-alt text-lg'></i>
+                    </a>
+                </div>
+
+                <!-- Service 3: Systems Integration -->
                 <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                     <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class='bx bx-file-blank text-4xl text-[#FF6D00]'></i>
+                        <i class='bx bx-transfer text-4xl text-[#FF6D00]'></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Technology Consulting</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Systems Integration</h3>
                     <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                        Comprehensive software engineering, systems integration, and technology consulting services.
+                        Seamless integration of disparate systems to create unified, efficient workflows across your organization.
                     </p>
-                    <a href="#" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
+                    <a href="/services/systems-integration" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
+                        Learn more
+                        <i class='bx bx-right-arrow-alt text-lg'></i>
+                    </a>
+                </div>
+
+                <!-- Service 4: Enterprise Automation -->
+                <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class='bx bx-bolt text-4xl text-[#FF6D00]'></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise Automation</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Custom enterprise workflow automation and AI solutions for SMEs in low-connectivity environments.
+                    </p>
+                    <a href="/services/enterprise-automation" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
+                        Learn more
+                        <i class='bx bx-right-arrow-alt text-lg'></i>
+                    </a>
+                </div>
+
+                <!-- Service 5: Marketing -->
+                <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class='bx bx-line-chart text-4xl text-[#FF6D00]'></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Marketing</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Strategic digital marketing solutions to grow your brand presence and reach your target audience effectively.
+                    </p>
+                    <a href="/services/marketing" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
+                        Learn more
+                        <i class='bx bx-right-arrow-alt text-lg'></i>
+                    </a>
+                </div>
+
+                <!-- Service 6: Content Marketing -->
+                <div class="bg-[#FF6D00] rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class='bx bx-edit text-4xl text-white'></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Content Marketing</h3>
+                    <p class="mb-6 text-sm leading-relaxed text-white/90">
+                        Compelling content strategies that engage your audience, build trust, and drive meaningful business results.
+                    </p>
+                    <a href="/services/content-marketing" class="font-semibold text-sm text-white inline-flex items-center gap-1 hover:underline">
+                        Learn more
+                        <i class='bx bx-right-arrow-alt text-lg'></i>
+                    </a>
+                </div>
+
+                <!-- Service 7: Social Media Marketing -->
+                <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class='bx bx-share-alt text-4xl text-[#FF6D00]'></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Social Media Marketing</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Build and grow your social media presence with targeted campaigns and community management strategies.
+                    </p>
+                    <a href="/services/social-media-marketing" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
+                        Learn more
+                        <i class='bx bx-right-arrow-alt text-lg'></i>
+                    </a>
+                </div>
+
+                <!-- Service 8: Search Engine Optimization -->
+                <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class='bx bx-search-alt text-4xl text-[#FF6D00]'></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Search Engine Optimization</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Improve your search rankings and drive organic traffic with our data-driven SEO strategies and best practices.
+                    </p>
+                    <a href="/services/search-engine-optimization" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
                         Learn more
                         <i class='bx bx-right-arrow-alt text-lg'></i>
                     </a>
@@ -417,42 +478,20 @@
                     @csrf
                     
                     @if(session('success'))
-                        <div class="bg-green-50 text-green-800 px-6 py-4 rounded-lg mb-6 shadow-md animate-fade-in" id="success-alert">
-                            <div class="flex items-center">
-                                <i class='bx bx-check-circle text-3xl mr-3 text-green-600'></i>
-                                <div>
-                                    <p class="font-bold text-lg">Success!</p>
-                                    <p class="text-base mt-1">{{ session('success') }}</p>
-                                </div>
-                            </div>
+                        <div class="bg-green-50 text-green-700 px-4 py-3 rounded-lg text-sm font-medium animate-fade-in" id="success-alert">
+                            Message sent successfully.
                         </div>
                     @endif
 
                     @if(session('error'))
-                        <div class="bg-red-50 border-red-500 text-red-800 px-6 py-4 rounded-lg mb-6 shadow-md animate-fade-in" id="error-alert">
-                            <div class="flex items-center">
-                                <i class='bx bx-error-circle text-3xl mr-3 text-red-600'></i>
-                                <div>
-                                    <p class="font-bold text-lg">Error</p>
-                                    <p class="text-base mt-1">{{ session('error') }}</p>
-                                </div>
-                            </div>
+                        <div class="bg-red-50 text-red-700 px-4 py-3 rounded-lg text-sm font-medium animate-fade-in" id="error-alert">
+                            Failed to send message. Please try again.
                         </div>
                     @endif
 
                     @if($errors->any())
-                        <div class="bg-red-50 border-red-500 text-red-800 px-6 py-4 rounded-lg mb-6 shadow-md animate-fade-in" id="error-alert">
-                            <div class="flex items-start">
-                                <i class='bx bx-error-circle text-3xl mr-3 text-red-600'></i>
-                                <div class="flex-1">
-                                    <p class="font-bold text-lg">Validation Error</p>
-                                    <ul class="list-disc list-inside space-y-1 text-base mt-1">
-                                        @foreach($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="bg-red-50 text-red-700 px-4 py-3 rounded-lg text-sm font-medium animate-fade-in" id="error-alert">
+                            Please fill in all required fields correctly.
                         </div>
                     @endif
 
@@ -505,10 +544,14 @@
                 <div>
                     <h4 class="text-lg font-bold mb-4">Services</h4>
                     <ul class="space-y-2 text-gray-300">
-                        <li><a href="#services" class="hover:text-[#FF6D00] transition-colors">Offline-First Development</a></li>
-                        <li><a href="#services" class="hover:text-[#FF6D00] transition-colors">Enterprise Automation</a></li>
-                        <li><a href="#services" class="hover:text-[#FF6D00] transition-colors">Technology Consulting</a></li>
-                        <li><a href="#services" class="hover:text-[#FF6D00] transition-colors">AI Solutions</a></li>
+                        <li><a href="/services/ai-solutions" class="hover:text-[#FF6D00] transition-colors">AI Solutions</a></li>
+                        <li><a href="/services/offline-first-development" class="hover:text-[#FF6D00] transition-colors">Offline-First Development</a></li>
+                        <li><a href="/services/systems-integration" class="hover:text-[#FF6D00] transition-colors">Systems Integration</a></li>
+                        <li><a href="/services/enterprise-automation" class="hover:text-[#FF6D00] transition-colors">Enterprise Automation</a></li>
+                        <li><a href="/services/marketing" class="hover:text-[#FF6D00] transition-colors">Marketing</a></li>
+                        <li><a href="/services/content-marketing" class="hover:text-[#FF6D00] transition-colors">Content Marketing</a></li>
+                        <li><a href="/services/social-media-marketing" class="hover:text-[#FF6D00] transition-colors">Social Media Marketing</a></li>
+                        <li><a href="/services/search-engine-optimization" class="hover:text-[#FF6D00] transition-colors">Search Engine Optimization</a></li>
                     </ul>
                 </div>
                 <div>
@@ -520,7 +563,7 @@
                         </li>
                         <li class="flex items-center gap-2">
                             <i class='bx bx-phone text-lg'></i>
-                            <a href="tel:+256758831249" class="hover:text-[#FF6D00] transition-colors">+256 758 831249</a>
+                            <a href="tel:+256700000000" class="hover:text-[#FF6D00] transition-colors">+256 700 000000</a>
                         </li>
                     </ul>
                 </div>
