@@ -93,7 +93,7 @@
                         </li>
                         <li class="flex items-center gap-2">
                             <i class='bx bx-phone text-lg'></i>
-                            <a href="tel:+256700000000" class="hover:text-[#FF6D00] transition-colors">+256 700 000000</a>
+                            <a href="tel:+256758831249" class="hover:text-[#FF6D00] transition-colors">+256 758 831249</a>
                         </li>
                     </ul>
                 </div>
