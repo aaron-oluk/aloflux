@@ -364,6 +364,7 @@
                             ['label' => 'Management System', 'highlight' => false],
                         ],
                         'link' => 'https://schoolms.aloflux.com/',
+                        'inhouse' => true,
                     ],
                     [
                         'icon' => 'bx-pen',
@@ -374,6 +375,7 @@
                             ['label' => 'Social Network', 'highlight' => false],
                         ],
                         'link' => 'https://versefountain.com',
+                        'inhouse' => true,
                     ],
                 ];
             @endphp
@@ -382,8 +384,16 @@
                 @foreach ($projects as $project)
                     <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 group">
                         <div class="p-6">
-                            <div class="w-12 h-12 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-4">
-                                <i class='bx {{ $project['icon'] }} text-3xl text-[#FF6D00]'></i>
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-12 h-12 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center">
+                                    <i class='bx {{ $project['icon'] }} text-3xl text-[#FF6D00]'></i>
+                                </div>
+                                @if (!empty($project['inhouse']))
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-[#1A1A1A] text-white text-xs font-semibold rounded-full">
+                                        <i class='bx bx-building-house text-sm'></i>
+                                        In-house Project
+                                    </span>
+                                @endif
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">{{ $project['title'] }}</h3>
                             <p class="text-gray-600 mb-4 text-sm leading-relaxed">
@@ -405,6 +415,26 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+
+            <!-- In-house products callout -->
+            <div class="mt-12 rounded-xl bg-[#1A1A1A] px-8 py-8 md:px-12 md:py-10 flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div class="flex-shrink-0 w-12 h-12 bg-[#FF6D00]/20 rounded-lg flex items-center justify-center">
+                    <i class='bx bx-package text-3xl text-[#FF6D00]'></i>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-white text-xl font-bold mb-1">Beyond Services — Our Own Products</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        In addition to building solutions for clients, Aloflux develops and maintains proprietary products
+                        that businesses and individuals can adopt directly. These in-house products are available
+                        <span class="text-white font-medium">as a service (SaaS)</span>, meaning you get a ready-made,
+                        continuously improved platform for a simple subscription or usage fee — no lengthy build cycle required.
+                    </p>
+                </div>
+                <a href="#contact" class="flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-[#FF6D00] text-white text-sm font-semibold rounded-lg hover:bg-[#e56200] transition-colors">
+                    Enquire Now
+                    <i class='bx bx-right-arrow-alt text-lg'></i>
+                </a>
             </div>
         </div>
     </section>
