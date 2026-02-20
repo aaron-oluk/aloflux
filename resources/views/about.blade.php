@@ -52,7 +52,16 @@
                     <div class="space-y-6">
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">Offline-First Architecture</span>
+                                <span class="text-gray-700 font-semibold">School Management System</span>
+                                <span class="text-gray-600 font-semibold">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-semibold">Versefountain (Creative Platform)</span>
                                 <span class="text-gray-600 font-semibold">90%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
@@ -61,20 +70,11 @@
                         </div>
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">AI & Automation Solutions</span>
-                                <span class="text-gray-600 font-semibold">85%</span>
+                                <span class="text-gray-700 font-semibold">Custom Software Development</span>
+                                <span class="text-gray-600 font-semibold">92%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">Market-Specific Customization</span>
-                                <span class="text-gray-600 font-semibold">88%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 88%"></div>
+                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 92%"></div>
                             </div>
                         </div>
                     </div>

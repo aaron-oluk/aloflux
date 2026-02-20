@@ -123,7 +123,16 @@
                     <div class="space-y-6 mb-8">
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">Offline-First Architecture</span>
+                                <span class="text-gray-700 font-semibold">School Management System</span>
+                                <span class="text-gray-600 font-semibold">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-semibold">Versefountain (Creative Platform)</span>
                                 <span class="text-gray-600 font-semibold">90%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
@@ -132,20 +141,11 @@
                         </div>
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">AI & Automation Solutions</span>
-                                <span class="text-gray-600 font-semibold">85%</span>
+                                <span class="text-gray-700 font-semibold">Custom Software Development</span>
+                                <span class="text-gray-600 font-semibold">92%</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">Market-Specific Customization</span>
-                                <span class="text-gray-600 font-semibold">88%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 88%"></div>
+                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 92%"></div>
                             </div>
                         </div>
                     </div>
@@ -211,124 +211,161 @@
                 </a>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Service 1: AI Solutions -->
-                <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class='bx bx-brain text-4xl text-[#FF6D00]'></i>
+            <!-- Major Services -->
+            <div class="mb-6">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FF6D00]/20 text-[#FF6D00] text-xs font-bold rounded-full uppercase tracking-wide mb-6">
+                    <i class='bx bx-star text-sm'></i>
+                    Major Services
+                </span>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <!-- School Management System -->
+                <div class="relative bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col">
+                    <span class="absolute top-4 right-4 inline-flex items-center gap-1 px-2 py-0.5 bg-[#1A1A1A] text-white text-xs font-semibold rounded-full">
+                        <i class='bx bx-building-house text-xs'></i>
+                        In-house
+                    </span>
+                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class='bx bx-book-reader text-4xl text-[#FF6D00]'></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">AI Solutions</h3>
-                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                        AI-powered solutions designed to help businesses streamline operations and boost productivity with intelligent automation.
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">School Management System</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed flex-1">
+                        A comprehensive platform for schools — student records, academic tracking, attendance, timetables, and parent-teacher communication. Works offline-first for all connectivity environments.
                     </p>
-                    <a href="/services/ai-solutions" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
-                        Learn more
+                    <a href="https://schoolms.aloflux.com/" target="_blank" class="text-[#FF6D00] font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Visit Platform
                         <i class='bx bx-right-arrow-alt text-lg'></i>
                     </a>
                 </div>
 
-                <!-- Service 2: Offline-First Development -->
-                <div class="bg-[#FF6D00] rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class='bx bx-shield text-4xl text-white'></i>
+                <!-- Versefountain -->
+                <div class="relative bg-[#FF6D00] rounded-xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col">
+                    <span class="absolute top-4 right-4 inline-flex items-center gap-1 px-2 py-0.5 bg-[#1A1A1A] text-white text-xs font-semibold rounded-full">
+                        <i class='bx bx-building-house text-xs'></i>
+                        In-house
+                    </span>
+                    <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-5">
+                        <i class='bx bx-pen text-4xl text-white'></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Offline-First Development</h3>
-                    <p class="mb-6 text-sm leading-relaxed text-white/90">
-                        We design and develop software with cleaner, offline-first architectures specifically tailored for African markets.
+                    <h3 class="text-xl font-bold text-white mb-3">Versefountain</h3>
+                    <p class="text-white/90 mb-6 text-sm leading-relaxed flex-1">
+                        A vibrant platform for creatives, writers, readers, and poets to share their work, discover new content, and connect with a community of literary enthusiasts.
                     </p>
-                    <a href="/services/offline-first-development" class="font-semibold text-sm text-white inline-flex items-center gap-1 hover:underline">
-                        Learn more
+                    <a href="https://versefountain.com" target="_blank" class="font-semibold text-sm text-white inline-flex items-center gap-1 hover:gap-2 transition-all hover:underline">
+                        Visit Platform
                         <i class='bx bx-right-arrow-alt text-lg'></i>
                     </a>
                 </div>
 
-                <!-- Service 3: Systems Integration -->
-                <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class='bx bx-transfer text-4xl text-[#FF6D00]'></i>
+                <!-- Software Development -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col">
+                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class='bx bx-code-alt text-4xl text-[#FF6D00]'></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Systems Integration</h3>
-                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                        Seamless integration of disparate systems to create unified, efficient workflows across your organization.
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Software Development</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed flex-1">
+                        End-to-end custom software development tailored to your business. From MVPs to enterprise-grade systems — web, mobile, and desktop — built with an offline-first approach.
                     </p>
-                    <a href="/services/systems-integration" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
-                        Learn more
+                    <a href="/#contact" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
+                        Get a Quote
                         <i class='bx bx-right-arrow-alt text-lg'></i>
                     </a>
                 </div>
+            </div>
 
-                <!-- Service 4: Enterprise Automation -->
-                <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class='bx bx-bolt text-4xl text-[#FF6D00]'></i>
+            <!-- Other Services -->
+            <div class="mb-6">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-gray-300 text-xs font-bold rounded-full uppercase tracking-wide mb-6">
+                    <i class='bx bx-grid-alt text-sm'></i>
+                    Other Services
+                </span>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:border-[#FF6D00]/50 hover:bg-white/10 transition-all">
+                    <div class="w-10 h-10 bg-[#FF6D00]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class='bx bx-brain text-2xl text-[#FF6D00]'></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise Automation</h3>
-                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                        Custom enterprise workflow automation and AI solutions for SMEs in low-connectivity environments.
-                    </p>
-                    <a href="/services/enterprise-automation" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
-                        Learn more
-                        <i class='bx bx-right-arrow-alt text-lg'></i>
+                    <h3 class="text-base font-bold text-white mb-2">AI Solutions</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">Custom AI models, predictive analytics, and intelligent process automation.</p>
+                    <a href="/services/ai-solutions" class="text-[#FF6D00] font-semibold text-xs inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Learn more <i class='bx bx-right-arrow-alt'></i>
                     </a>
                 </div>
 
-                <!-- Service 5: Marketing -->
-                <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class='bx bx-line-chart text-4xl text-[#FF6D00]'></i>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:border-[#FF6D00]/50 hover:bg-white/10 transition-all">
+                    <div class="w-10 h-10 bg-[#FF6D00]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class='bx bx-shield text-2xl text-[#FF6D00]'></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Marketing</h3>
-                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                        Strategic digital marketing solutions to grow your brand presence and reach your target audience effectively.
-                    </p>
-                    <a href="/services/marketing" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
-                        Learn more
-                        <i class='bx bx-right-arrow-alt text-lg'></i>
+                    <h3 class="text-base font-bold text-white mb-2">Offline-First Dev</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">Software that syncs when connectivity returns, keeping your business running.</p>
+                    <a href="/services/offline-first-development" class="text-[#FF6D00] font-semibold text-xs inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Learn more <i class='bx bx-right-arrow-alt'></i>
                     </a>
                 </div>
 
-                <!-- Service 6: Content Marketing -->
-                <div class="bg-[#FF6D00] rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class='bx bx-edit text-4xl text-white'></i>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:border-[#FF6D00]/50 hover:bg-white/10 transition-all">
+                    <div class="w-10 h-10 bg-[#FF6D00]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class='bx bx-transfer text-2xl text-[#FF6D00]'></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Content Marketing</h3>
-                    <p class="mb-6 text-sm leading-relaxed text-white/90">
-                        Compelling content strategies that engage your audience, build trust, and drive meaningful business results.
-                    </p>
-                    <a href="/services/content-marketing" class="font-semibold text-sm text-white inline-flex items-center gap-1 hover:underline">
-                        Learn more
-                        <i class='bx bx-right-arrow-alt text-lg'></i>
+                    <h3 class="text-base font-bold text-white mb-2">Systems Integration</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">Connect legacy systems with modern applications and third-party APIs.</p>
+                    <a href="/services/systems-integration" class="text-[#FF6D00] font-semibold text-xs inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Learn more <i class='bx bx-right-arrow-alt'></i>
                     </a>
                 </div>
 
-                <!-- Service 7: Social Media Marketing -->
-                <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class='bx bx-share-alt text-4xl text-[#FF6D00]'></i>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:border-[#FF6D00]/50 hover:bg-white/10 transition-all">
+                    <div class="w-10 h-10 bg-[#FF6D00]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class='bx bx-bolt text-2xl text-[#FF6D00]'></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Social Media Marketing</h3>
-                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                        Build and grow your social media presence with targeted campaigns and community management strategies.
-                    </p>
-                    <a href="/services/social-media-marketing" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
-                        Learn more
-                        <i class='bx bx-right-arrow-alt text-lg'></i>
+                    <h3 class="text-base font-bold text-white mb-2">Enterprise Automation</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">Automate workflows, approvals, and operations for SMEs.</p>
+                    <a href="/services/enterprise-automation" class="text-[#FF6D00] font-semibold text-xs inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Learn more <i class='bx bx-right-arrow-alt'></i>
                     </a>
                 </div>
 
-                <!-- Service 8: Search Engine Optimization -->
-                <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class='bx bx-search-alt text-4xl text-[#FF6D00]'></i>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:border-[#FF6D00]/50 hover:bg-white/10 transition-all">
+                    <div class="w-10 h-10 bg-[#FF6D00]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class='bx bx-line-chart text-2xl text-[#FF6D00]'></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Search Engine Optimization</h3>
-                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                        Improve your search rankings and drive organic traffic with our data-driven SEO strategies and best practices.
-                    </p>
-                    <a href="/services/search-engine-optimization" class="text-[#1A1A1A] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#FF6D00] transition-colors">
-                        Learn more
-                        <i class='bx bx-right-arrow-alt text-lg'></i>
+                    <h3 class="text-base font-bold text-white mb-2">Marketing</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">Data-driven digital marketing to grow your brand and reach.</p>
+                    <a href="/services/marketing" class="text-[#FF6D00] font-semibold text-xs inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Learn more <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:border-[#FF6D00]/50 hover:bg-white/10 transition-all">
+                    <div class="w-10 h-10 bg-[#FF6D00]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class='bx bx-edit text-2xl text-[#FF6D00]'></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">Content Marketing</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">Engaging content strategies that build trust and brand authority.</p>
+                    <a href="/services/content-marketing" class="text-[#FF6D00] font-semibold text-xs inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Learn more <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:border-[#FF6D00]/50 hover:bg-white/10 transition-all">
+                    <div class="w-10 h-10 bg-[#FF6D00]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class='bx bx-share-alt text-2xl text-[#FF6D00]'></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">Social Media</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">Targeted campaigns and community management across all platforms.</p>
+                    <a href="/services/social-media-marketing" class="text-[#FF6D00] font-semibold text-xs inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Learn more <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:border-[#FF6D00]/50 hover:bg-white/10 transition-all">
+                    <div class="w-10 h-10 bg-[#FF6D00]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class='bx bx-search-alt text-2xl text-[#FF6D00]'></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">SEO</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-3">Improve search rankings and drive organic traffic with data-driven strategies.</p>
+                    <a href="/services/search-engine-optimization" class="text-[#FF6D00] font-semibold text-xs inline-flex items-center gap-1 hover:gap-2 transition-all">
+                        Learn more <i class='bx bx-right-arrow-alt'></i>
                     </a>
                 </div>
             </div>
