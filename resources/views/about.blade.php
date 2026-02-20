@@ -124,7 +124,7 @@
         </div>
     </section>
 
-    <!-- Statistics -->
+    {{-- Statistics - commented out
     <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -159,6 +159,7 @@
             </div>
         </div>
     </section>
+    --}}
 
     <!-- CTA Section -->
     <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#FF6D00]">

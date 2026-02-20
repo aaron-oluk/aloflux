@@ -59,46 +59,74 @@
     <!-- Footer -->
     <footer class="bg-[#1A1A1A] text-white py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-12 mb-8">
-                <div>
+            <div class="grid md:grid-cols-4 gap-10 mb-8">
+                <!-- Brand -->
+                <div class="md:col-span-1">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 bg-[#FF6D00] rounded flex items-center justify-center">
                             <span class="text-white font-bold text-xl">A</span>
                         </div>
                         <span class="text-2xl font-bold">Aloflux</span>
                     </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        Technology solutions designed for African markets. Building the future of offline-first software.
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        Building innovative software products and solutions for African markets — from school management to creative platforms and custom development.
                     </p>
                 </div>
+
+                <!-- Major Services -->
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-300">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-[#FF6D00] mb-4">Major Services</h4>
+                    <ul class="space-y-2.5 text-gray-300 text-sm">
+                        <li>
+                            <a href="https://schoolms.aloflux.com/" target="_blank" class="hover:text-[#FF6D00] transition-colors flex items-center gap-2">
+                                <i class='bx bx-book-reader text-base'></i>
+                                School Management System
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://versefountain.com" target="_blank" class="hover:text-[#FF6D00] transition-colors flex items-center gap-2">
+                                <i class='bx bx-pen text-base'></i>
+                                Versefountain
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/#contact" class="hover:text-[#FF6D00] transition-colors flex items-center gap-2">
+                                <i class='bx bx-code-alt text-base'></i>
+                                Software Development
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Other Services -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">Other Services</h4>
+                    <ul class="space-y-2.5 text-gray-400 text-sm">
                         <li><a href="/services/ai-solutions" class="hover:text-[#FF6D00] transition-colors">AI Solutions</a></li>
                         <li><a href="/services/offline-first-development" class="hover:text-[#FF6D00] transition-colors">Offline-First Development</a></li>
                         <li><a href="/services/systems-integration" class="hover:text-[#FF6D00] transition-colors">Systems Integration</a></li>
                         <li><a href="/services/enterprise-automation" class="hover:text-[#FF6D00] transition-colors">Enterprise Automation</a></li>
                         <li><a href="/services/marketing" class="hover:text-[#FF6D00] transition-colors">Marketing</a></li>
-                        <li><a href="/services/content-marketing" class="hover:text-[#FF6D00] transition-colors">Content Marketing</a></li>
-                        <li><a href="/services/social-media-marketing" class="hover:text-[#FF6D00] transition-colors">Social Media Marketing</a></li>
-                        <li><a href="/services/search-engine-optimization" class="hover:text-[#FF6D00] transition-colors">Search Engine Optimization</a></li>
+                        <li><a href="/services/search-engine-optimization" class="hover:text-[#FF6D00] transition-colors">SEO</a></li>
                     </ul>
                 </div>
+
+                <!-- Contact -->
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-300">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">Contact</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
                         <li class="flex items-center gap-2">
-                            <i class='bx bx-envelope text-lg'></i>
+                            <i class='bx bx-envelope text-lg text-[#FF6D00]'></i>
                             info@aloflux.com
                         </li>
                         <li class="flex items-center gap-2">
-                            <i class='bx bx-phone text-lg'></i>
+                            <i class='bx bx-phone text-lg text-[#FF6D00]'></i>
                             <a href="tel:+256758831249" class="hover:text-[#FF6D00] transition-colors">+256 758 831249</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-8 text-center text-gray-300">
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
                 <p>&copy; {{ date('Y') }} Aloflux. All rights reserved.</p>
             </div>
         </div>
