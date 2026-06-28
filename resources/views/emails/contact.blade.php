@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Project Inquiry from {{ $name }}</title>
 </head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333333; margin: 0; padding: 0; background-color: #f4f4f7;">
-    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f7; padding: 40px 20px;">
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #1a1a1a; margin: 0; padding: 0; background-color: #f0f0f0;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f0f0f0; padding: 48px 20px;">
         <tr>
             <td align="center">
                 <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
-                    <!-- Logo -->
+
+                    <!-- Header -->
                     <tr>
-                        <td align="center" style="padding-bottom: 30px;">
+                        <td style="background-color: #1A1A1A; border-radius: 12px 12px 0 0; padding: 28px 40px;">
                             <table cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td style="background-color: #FF6D00; width: 36px; height: 36px; border-radius: 6px; text-align: center; vertical-align: middle;">
-                                        <span style="color: #ffffff; font-weight: bold; font-size: 18px;">A</span>
+                                    <td style="background-color: #FF6D00; width: 32px; height: 32px; border-radius: 6px; text-align: center; vertical-align: middle;">
+                                        <span style="color: #ffffff; font-weight: 800; font-size: 16px; line-height: 32px;">A</span>
                                     </td>
-                                    <td style="padding-left: 10px; font-size: 22px; font-weight: bold; color: #1A1A1A;">
+                                    <td style="padding-left: 10px; font-size: 18px; font-weight: 700; color: #ffffff; letter-spacing: -0.3px;">
                                         Aloflux
                                     </td>
                                 </tr>
@@ -26,107 +27,83 @@
                         </td>
                     </tr>
 
-                    <!-- Main Card -->
+                    <!-- Body -->
                     <tr>
-                        <td style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                            <!-- Orange Top Bar -->
-                            <table width="100%" cellpadding="0" cellspacing="0">
+                        <td style="background-color: #ffffff; padding: 40px 40px 32px; border-radius: 0 0 12px 12px;">
+
+                            <!-- Intro -->
+                            <p style="margin: 0 0 6px 0; font-size: 22px; font-weight: 700; color: #1A1A1A;">New project inquiry</p>
+                            <p style="margin: 0 0 32px 0; font-size: 15px; color: #666666;">
+                                From <strong style="color: #1A1A1A;">{{ $name }}</strong>@if($company), <strong style="color: #1A1A1A;">{{ $company }}</strong>@endif
+                            </p>
+
+                            <!-- Divider -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 28px;">
+                                <tr><td style="height: 1px; background-color: #ebebeb;"></td></tr>
+                            </table>
+
+                            <!-- Project meta -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 28px;">
                                 <tr>
-                                    <td style="height: 4px; background-color: #FF6D00;"></td>
+                                    <td width="50%" style="padding-right: 12px; vertical-align: top;">
+                                        <p style="margin: 0 0 4px 0; font-size: 11px; font-weight: 600; color: #999999; text-transform: uppercase; letter-spacing: 0.8px;">Project Type</p>
+                                        <p style="margin: 0; font-size: 15px; font-weight: 600; color: #1A1A1A;">{{ $projectType }}</p>
+                                    </td>
+                                    <td width="50%" style="padding-left: 12px; vertical-align: top;">
+                                        <p style="margin: 0 0 4px 0; font-size: 11px; font-weight: 600; color: #999999; text-transform: uppercase; letter-spacing: 0.8px;">Proposed Budget</p>
+                                        <p style="margin: 0; font-size: 15px; font-weight: 600; color: #1A1A1A;">{{ $proposedBudget }}</p>
+                                    </td>
                                 </tr>
                             </table>
 
-                            <!-- Content -->
-                            <table width="100%" cellpadding="0" cellspacing="0" style="padding: 40px 36px;">
-                                <!-- Greeting -->
-                                <tr>
-                                    <td style="padding-bottom: 24px;">
-                                        <p style="margin: 0; font-size: 16px; color: #555555;">Hi team,</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding-bottom: 28px;">
-                                        <p style="margin: 0; font-size: 16px; color: #555555;">
-                                            You have a new project inquiry from <strong style="color: #1A1A1A;">{{ $name }}</strong>@if($company) at <strong style="color: #1A1A1A;">{{ $company }}</strong>@endif.
-                                        </p>
-                                    </td>
-                                </tr>
+                            <!-- Divider -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 28px;">
+                                <tr><td style="height: 1px; background-color: #ebebeb;"></td></tr>
+                            </table>
 
-                                <!-- Project Summary Tags -->
+                            <!-- Project description -->
+                            <p style="margin: 0 0 12px 0; font-size: 11px; font-weight: 600; color: #999999; text-transform: uppercase; letter-spacing: 0.8px;">Project Description</p>
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 32px;">
                                 <tr>
-                                    <td style="padding-bottom: 28px;">
-                                        <table cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                <td style="padding-right: 8px; padding-bottom: 8px;">
-                                                    <span style="display: inline-block; background-color: #FF6D00; color: #ffffff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px;">{{ $projectType }}</span>
-                                                </td>
-                                                <td style="padding-bottom: 8px;">
-                                                    <span style="display: inline-block; background-color: #1A1A1A; color: #ffffff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px;">{{ $proposedBudget }}</span>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                    <td style="background-color: #f8f8f8; border-radius: 8px; padding: 20px 24px;">
+                                        <p style="margin: 0; font-size: 15px; color: #333333; line-height: 1.75; white-space: pre-wrap;">{{ $projectDescription }}</p>
                                     </td>
                                 </tr>
+                            </table>
 
-                                <!-- Project Description -->
-                                <tr>
-                                    <td style="padding-bottom: 8px;">
-                                        <p style="margin: 0; font-size: 12px; font-weight: 600; color: #999999; text-transform: uppercase; letter-spacing: 1px;">Project Description</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding-bottom: 32px;">
-                                        <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #FF6D00;">
-                                            <tr>
-                                                <td style="padding: 24px;">
-                                                    <p style="margin: 0; font-size: 15px; color: #333333; line-height: 1.7; white-space: pre-wrap;">{{ $projectDescription }}</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
+                            <!-- Divider -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 28px;">
+                                <tr><td style="height: 1px; background-color: #ebebeb;"></td></tr>
+                            </table>
 
-                                <!-- Contact Details -->
+                            <!-- Contact details -->
+                            <p style="margin: 0 0 12px 0; font-size: 11px; font-weight: 600; color: #999999; text-transform: uppercase; letter-spacing: 0.8px;">Contact Details</p>
+                            <table cellpadding="0" cellspacing="0" style="margin-bottom: 32px;">
                                 <tr>
-                                    <td style="padding-bottom: 32px;">
-                                        <table width="100%" cellpadding="0" cellspacing="0" style="border-top: 1px solid #e9ecef;">
-                                            <tr>
-                                                <td style="padding-top: 24px; padding-bottom: 12px;">
-                                                    <p style="margin: 0; font-size: 12px; font-weight: 600; color: #999999; text-transform: uppercase; letter-spacing: 1px;">Sender Details</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding-bottom: 8px;">
-                                                    <table cellpadding="0" cellspacing="0">
-                                                        <tr>
-                                                            <td style="padding-right: 8px; vertical-align: middle; color: #FF6D00; font-size: 16px;">&#9993;</td>
-                                                            <td style="font-size: 15px; color: #333333;">
-                                                                <a href="mailto:{{ $email }}" style="color: #FF6D00; text-decoration: none;">{{ $email }}</a>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            @if($company)
-                                            <tr>
-                                                <td style="padding-bottom: 8px;">
-                                                    <table cellpadding="0" cellspacing="0">
-                                                        <tr>
-                                                            <td style="padding-right: 8px; vertical-align: middle; color: #FF6D00; font-size: 16px;">&#9881;</td>
-                                                            <td style="font-size: 15px; color: #333333;">{{ $company }}</td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            @endif
-                                        </table>
+                                    <td style="padding-bottom: 6px; font-size: 15px; color: #333333;">
+                                        <strong style="color: #1A1A1A;">Name:</strong> {{ $name }}
                                     </td>
                                 </tr>
-
-                                <!-- Reply Button -->
                                 <tr>
-                                    <td align="center" style="padding-bottom: 8px;">
-                                        <a href="mailto:{{ $email }}?subject=Re: Your {{ $projectType }} inquiry to Aloflux" style="display: inline-block; background-color: #FF6D00; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 15px; padding: 14px 32px; border-radius: 8px;">
+                                    <td style="padding-bottom: 6px; font-size: 15px; color: #333333;">
+                                        <strong style="color: #1A1A1A;">Email:</strong>
+                                        <a href="mailto:{{ $email }}" style="color: #FF6D00; text-decoration: none;">{{ $email }}</a>
+                                    </td>
+                                </tr>
+                                @if($company)
+                                <tr>
+                                    <td style="font-size: 15px; color: #333333;">
+                                        <strong style="color: #1A1A1A;">Company:</strong> {{ $company }}
+                                    </td>
+                                </tr>
+                                @endif
+                            </table>
+
+                            <!-- CTA -->
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <a href="mailto:{{ $email }}?subject=Re: Your {{ $projectType }} inquiry" style="display: inline-block; background-color: #1A1A1A; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 14px; padding: 13px 28px; border-radius: 8px; letter-spacing: 0.1px;">
                                             Reply to {{ $name }}
                                         </a>
                                     </td>
@@ -137,15 +114,14 @@
 
                     <!-- Footer -->
                     <tr>
-                        <td style="padding-top: 30px; text-align: center;">
-                            <p style="margin: 0 0 6px 0; font-size: 13px; color: #999999;">
-                                This inquiry was submitted via the contact form on <a href="https://aloflux.com" style="color: #FF6D00; text-decoration: none;">aloflux.com</a>
+                        <td style="padding: 24px 0; text-align: center;">
+                            <p style="margin: 0 0 4px 0; font-size: 12px; color: #aaaaaa;">
+                                Submitted via <a href="https://aloflux.com" style="color: #aaaaaa; text-decoration: underline;">aloflux.com</a>
                             </p>
-                            <p style="margin: 0; font-size: 12px; color: #bbbbbb;">
-                                &copy; {{ date('Y') }} Aloflux. All rights reserved.
-                            </p>
+                            <p style="margin: 0; font-size: 12px; color: #aaaaaa;">&copy; {{ date('Y') }} Aloflux LLC</p>
                         </td>
                     </tr>
+
                 </table>
             </td>
         </tr>
