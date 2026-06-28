@@ -2,6 +2,26 @@
 
 @section('title', $service['title'] . ' - Aloflux')
 @section('meta_description', $service['meta_description'])
+@section('og_title', $service['title'] . ' - Aloflux')
+@section('og_description', $service['subtitle'])
+
+@section('structured_data')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "Service",
+    "name": "{{ $service['title'] }}",
+    "description": "{{ $service['description'] }}",
+    "provider": {
+        "@@type": "Organization",
+        "name": "Aloflux LLC",
+        "url": "{{ url('/') }}"
+    },
+    "areaServed": ["US", "EU"],
+    "url": "{{ url()->current() }}"
+}
+</script>
+@endsection
 
 @php $activePage = 'services'; @endphp
 

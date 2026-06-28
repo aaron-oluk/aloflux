@@ -1,6 +1,25 @@
 @extends('layouts.app')
 
-@section('title', 'Aloflux - Technology Solutions for African Markets')
+@section('title', 'Aloflux - Custom Software, Automation and AI Solutions')
+@section('meta_description', 'Aloflux builds custom software, enterprise automation, AI powered SaaS solutions, and digital commerce infrastructure for US and European businesses. High quality engineering at competitive rates.')
+@section('og_title', 'Aloflux - Custom Software, Automation and AI Solutions')
+@section('og_description', 'We build custom software, enterprise automation, and AI powered solutions for US and European businesses. High quality engineering at competitive rates.')
+
+@section('structured_data')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "WebSite",
+    "name": "Aloflux",
+    "url": "{{ url('/') }}",
+    "description": "Custom software development, enterprise automation, and AI powered solutions for US and European businesses.",
+    "publisher": {
+        "@@type": "Organization",
+        "name": "Aloflux LLC"
+    }
+}
+</script>
+@endsection
 
 @php $activePage = 'home'; @endphp
 
@@ -18,7 +37,7 @@
                         Empowering Your Success with Digital Expertise
                     </h1>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        We design, develop, and commercialize software with cleaner, offline-first architectures for African markets. Our solutions work seamlessly even in low-connectivity environments, helping SMEs thrive with custom enterprise automation and AI-powered tools.
+                        We design, build, and deploy custom software, enterprise automation, AI powered SaaS solutions, and digital commerce infrastructure for US and European businesses. Experienced engineers who communicate clearly and deliver solutions that scale, at rates that make serious projects financially viable.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="/services" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#1A1A1A] text-white rounded-lg font-semibold hover:bg-[#E55A00] transition-colors">
@@ -116,38 +135,27 @@
 
                 <div>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Aloflux is a technology company dedicated to creating innovative software solutions that address the unique challenges faced by businesses in African markets. We understand that connectivity can be unreliable, and we build our solutions with this reality in mind.
+                        Aloflux serves US and European SMEs, startups, and NGOs that need custom software, enterprise automation, and AI powered tools. We focus on technical quality, clear communication, and building solutions that scale and last well beyond the initial release.
                     </p>
 
-                    <!-- Progress Bars -->
-                    <div class="space-y-6 mb-8">
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">School Management System</span>
-                                <span class="text-gray-600 font-semibold">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">Versefountain (Creative Platform)</span>
-                                <span class="text-gray-600 font-semibold">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">Custom Software Development</span>
-                                <span class="text-gray-600 font-semibold">92%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 92%"></div>
-                            </div>
-                        </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class='bx bx-check-circle text-xl text-[#FF6D00] mt-0.5 shrink-0'></i>
+                            <span class="text-gray-700">Custom web applications and enterprise systems built around your business needs</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class='bx bx-check-circle text-xl text-[#FF6D00] mt-0.5 shrink-0'></i>
+                            <span class="text-gray-700">In-house SaaS products: School Management System and Versefountain</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class='bx bx-check-circle text-xl text-[#FF6D00] mt-0.5 shrink-0'></i>
+                            <span class="text-gray-700">Enterprise automation, AI powered tools, and systems integration</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class='bx bx-check-circle text-xl text-[#FF6D00] mt-0.5 shrink-0'></i>
+                            <span class="text-gray-700">Payment gateway integrations and digital commerce infrastructure</span>
+                        </li>
+                    </ul>
                     </div>
 
                     <a href="/about" class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#1A1A1A] text-white rounded-lg font-semibold hover:bg-[#E55A00] transition-colors">
@@ -316,7 +324,7 @@
 
                 <div class="bg-white/5 border border-white/10 rounded-lg p-5 hover:border-[#FF6D00]/50 hover:bg-white/10 transition-all">
                     <div class="w-10 h-10 bg-[#FF6D00]/20 rounded-lg flex items-center justify-center mb-4">
-                        <i class='bx bx-bolt text-2xl text-[#FF6D00]'></i>
+                        <i class='bx bx-cog text-2xl text-[#FF6D00]'></i>
                     </div>
                     <h3 class="text-base font-bold text-white mb-2">Enterprise Automation</h3>
                     <p class="text-gray-400 text-xs leading-relaxed mb-3">Automate workflows, approvals, and operations for SMEs.</p>
@@ -498,47 +506,91 @@
 
                     @if(session('success'))
                         <div class="bg-green-50 text-green-700 px-4 py-3 rounded-lg text-sm font-medium animate-fade-in" id="success-alert">
-                            Message sent successfully.
+                            Your project inquiry was sent successfully. We will get back to you shortly.
                         </div>
                     @endif
 
                     @if(session('error'))
                         <div class="bg-red-50 text-red-700 px-4 py-3 rounded-lg text-sm font-medium animate-fade-in" id="error-alert">
-                            Failed to send message. Please try again.
+                            Failed to send your inquiry. Please try again.
                         </div>
                     @endif
 
                     @if($errors->any())
-                        <div class="bg-red-50 text-red-700 px-4 py-3 rounded-lg text-sm font-medium animate-fade-in" id="error-alert">
+                        <div class="bg-red-50 text-red-700 px-4 py-3 rounded-lg text-sm font-medium animate-fade-in">
                             Please fill in all required fields correctly.
                         </div>
                     @endif
 
+                    {{-- Contact Info --}}
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
-                            <input type="text" id="name" name="name" value="{{ old('name') }}" required
+                            <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name <span class="text-[#FF6D00]">*</span></label>
+                            <input type="text" id="name" name="name" value="{{ old('name') }}" required placeholder="John Smith"
                                 class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" name="email" value="{{ old('email') }}" required
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address <span class="text-[#FF6D00]">*</span></label>
+                            <input type="email" id="email" name="email" value="{{ old('email') }}" required placeholder="john@company.com"
                                 class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200">
                         </div>
                     </div>
+
                     <div>
-                        <label for="company" class="block text-sm font-semibold text-gray-700 mb-2">Company</label>
-                        <input type="text" id="company" name="company" value="{{ old('company') }}"
+                        <label for="company" class="block text-sm font-semibold text-gray-700 mb-2">Company / Organisation</label>
+                        <input type="text" id="company" name="company" value="{{ old('company') }}" placeholder="Your company name"
                             class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200">
                     </div>
-                    <div>
-                        <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
-                        <textarea id="message" name="message" rows="5" required
-                            class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200 resize-none">{{ old('message') }}</textarea>
+
+                    {{-- Project Details --}}
+                    <div class="border-t border-gray-200 pt-6">
+                        <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-5">Project Details</p>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="project_type" class="block text-sm font-semibold text-gray-700 mb-2">Project Type <span class="text-[#FF6D00]">*</span></label>
+                                <select id="project_type" name="project_type" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200 appearance-none">
+                                    <option value="" disabled {{ old('project_type') ? '' : 'selected' }}>Select a service</option>
+                                    <option value="Custom Software Development" {{ old('project_type') === 'Custom Software Development' ? 'selected' : '' }}>Custom Software Development</option>
+                                    <option value="Enterprise Automation" {{ old('project_type') === 'Enterprise Automation' ? 'selected' : '' }}>Enterprise Automation</option>
+                                    <option value="AI Powered SaaS Solution" {{ old('project_type') === 'AI Powered SaaS Solution' ? 'selected' : '' }}>AI Powered SaaS Solution</option>
+                                    <option value="Digital Commerce Infrastructure" {{ old('project_type') === 'Digital Commerce Infrastructure' ? 'selected' : '' }}>Digital Commerce Infrastructure</option>
+                                    <option value="Systems Integration" {{ old('project_type') === 'Systems Integration' ? 'selected' : '' }}>Systems Integration</option>
+                                    <option value="IT Managed Services" {{ old('project_type') === 'IT Managed Services' ? 'selected' : '' }}>IT Managed Services</option>
+                                    <option value="School Management System" {{ old('project_type') === 'School Management System' ? 'selected' : '' }}>School Management System</option>
+                                    <option value="Marketing or SEO" {{ old('project_type') === 'Marketing or SEO' ? 'selected' : '' }}>Marketing or SEO</option>
+                                    <option value="Other" {{ old('project_type') === 'Other' ? 'selected' : '' }}>Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="proposed_budget" class="block text-sm font-semibold text-gray-700 mb-2">Proposed Budget <span class="text-[#FF6D00]">*</span></label>
+                                <select id="proposed_budget" name="proposed_budget" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200 appearance-none">
+                                    <option value="" disabled {{ old('proposed_budget') ? '' : 'selected' }}>Select a range</option>
+                                    <option value="Discovery Sprint ($1,500 to $3,000)" {{ old('proposed_budget') === 'Discovery Sprint ($1,500 to $3,000)' ? 'selected' : '' }}>Discovery Sprint ($1,500 to $3,000)</option>
+                                    <option value="$3,000 to $8,000" {{ old('proposed_budget') === '$3,000 to $8,000' ? 'selected' : '' }}>$3,000 to $8,000</option>
+                                    <option value="$8,000 to $25,000" {{ old('proposed_budget') === '$8,000 to $25,000' ? 'selected' : '' }}>$8,000 to $25,000</option>
+                                    <option value="$25,000 to $50,000" {{ old('proposed_budget') === '$25,000 to $50,000' ? 'selected' : '' }}>$25,000 to $50,000</option>
+                                    <option value="$50,000 or above" {{ old('proposed_budget') === '$50,000 or above' ? 'selected' : '' }}>$50,000 or above</option>
+                                    <option value="Monthly Retainer (ongoing)" {{ old('proposed_budget') === 'Monthly Retainer (ongoing)' ? 'selected' : '' }}>Monthly Retainer (ongoing)</option>
+                                    <option value="Not sure yet" {{ old('proposed_budget') === 'Not sure yet' ? 'selected' : '' }}>Not sure yet</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
+
+                    <div>
+                        <label for="project_description" class="block text-sm font-semibold text-gray-700 mb-2">Project Description <span class="text-[#FF6D00]">*</span></label>
+                        <textarea id="project_description" name="project_description" rows="6" required
+                            placeholder="Describe what you are looking to build or solve. Include any relevant context, existing systems, timelines, or constraints."
+                            class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200 resize-none">{{ old('project_description') }}</textarea>
+                    </div>
+
                     <button type="submit"
                         class="w-full px-8 py-4 bg-[#1A1A1A] text-white rounded-lg font-semibold hover:bg-[#E55A00] transition-colors shadow-lg">
-                        Send Message
+                        Send Project Inquiry
                     </button>
                 </form>
             </div>

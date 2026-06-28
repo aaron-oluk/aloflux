@@ -65,7 +65,7 @@ Route::get('/services/{slug}', function (string $slug) {
         'enterprise-automation' => [
             'title' => 'Enterprise Automation',
             'subtitle' => 'Streamline your operations with custom workflow automation.',
-            'icon' => 'bx-bolt',
+            'icon' => 'bx-cog',
             'heading' => 'Automate Your Enterprise Workflows',
             'description' => 'Custom enterprise workflow automation solutions designed for SMEs in low-connectivity environments. We help businesses reduce manual work, minimize errors, and increase operational efficiency.',
             'description_extended' => 'Our automation solutions cover everything from document processing and approval workflows to inventory management and customer communications. Each solution is tailored to your specific business processes.',
@@ -133,8 +133,38 @@ Route::get('/services/{slug}', function (string $slug) {
             'meta_description' => 'SEO by Aloflux - Improve your search rankings and drive organic traffic.',
             'features' => [
                 ['icon' => 'bx-search', 'title' => 'Keyword Research', 'description' => 'In-depth keyword research to identify high-value opportunities that your target audience is searching for.'],
-                ['icon' => 'bx-code-block', 'title' => 'Technical SEO', 'description' => 'Technical audits and optimizations to ensure your website is fast, crawlable, and search-engine friendly.'],
+                ['icon' => 'bx-code-block', 'title' => 'Technical SEO', 'description' => 'Technical audits and optimizations to ensure your website is fast, crawlable, and search engine friendly.'],
                 ['icon' => 'bx-link-alt', 'title' => 'Link Building', 'description' => 'Strategic link building campaigns that boost your domain authority and search rankings.'],
+            ],
+        ],
+        'digital-commerce' => [
+            'title' => 'Digital Commerce Infrastructure',
+            'subtitle' => 'E-commerce platforms, payment gateways, and cross-border transaction tooling.',
+            'icon' => 'bx-store',
+            'heading' => 'Build Commerce Infrastructure That Scales',
+            'description' => 'We design and build digital commerce systems for businesses that need reliable, scalable transaction infrastructure. From e-commerce storefronts to POS and inventory management, we cover the full stack of commerce operations.',
+            'description_extended' => 'Our team integrates leading payment gateways including Pesapal, DusuPay, SeerBit, Tazapay, and Dodo Payments, supporting cross-border transactions and local payment methods. We also build custom POS systems and inventory management platforms tailored to your business operations.',
+            'image' => 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=450&fit=crop',
+            'meta_description' => 'Digital Commerce Infrastructure by Aloflux - E-commerce, POS, payment gateways, and cross-border transaction tooling.',
+            'features' => [
+                ['icon' => 'bx-credit-card', 'title' => 'Payment Gateway Integration', 'description' => 'Integrate Pesapal, DusuPay, SeerBit, Tazapay, Dodo Payments, and other gateways for seamless local and cross-border payments.'],
+                ['icon' => 'bx-store-alt', 'title' => 'E-Commerce Platforms', 'description' => 'Custom e-commerce storefronts and marketplaces built for performance, conversion, and scale.'],
+                ['icon' => 'bx-package', 'title' => 'POS and Inventory Management', 'description' => 'Point of sale systems and inventory management platforms tailored to your retail or distribution operations.'],
+            ],
+        ],
+        'it-managed-services' => [
+            'title' => 'IT Managed Services',
+            'subtitle' => 'Web hosting, email infrastructure, domain administration, and IT support.',
+            'icon' => 'bx-server',
+            'heading' => 'Reliable IT Management Without the Overhead',
+            'description' => 'We manage the IT infrastructure that keeps your organisation running. Web hosting, email infrastructure, domain administration, and ongoing IT support, all handled by a dedicated team so your internal staff can focus on what matters.',
+            'description_extended' => 'Our managed services cover Linux server administration, cPanel and WHM environments, email infrastructure setup and maintenance, SSL management, and responsive IT support. We currently manage services for organisations including CONSENT and FoSCU.',
+            'image' => 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=450&fit=crop',
+            'meta_description' => 'IT Managed Services by Aloflux - Web hosting, email infrastructure, domain administration, and IT support.',
+            'features' => [
+                ['icon' => 'bx-cloud', 'title' => 'Web Hosting and Server Management', 'description' => 'Reliable Linux server administration and hosting environments managed to keep your platforms fast and available.'],
+                ['icon' => 'bx-envelope', 'title' => 'Email Infrastructure', 'description' => 'Professional email infrastructure setup, configuration, and ongoing maintenance for your organisation.'],
+                ['icon' => 'bx-support', 'title' => 'IT Support', 'description' => 'Responsive IT support covering domains, SSL certificates, and day-to-day technical issues for your team.'],
             ],
         ],
     ];
@@ -147,3 +177,42 @@ Route::get('/services/{slug}', function (string $slug) {
 })->name('service.show');
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+
+Route::get('/sitemap.xml', function () {
+    $serviceslugs = [
+        'ai-solutions',
+        'offline-first-development',
+        'systems-integration',
+        'enterprise-automation',
+        'marketing',
+        'content-marketing',
+        'social-media-marketing',
+        'search-engine-optimization',
+        'digital-commerce',
+        'it-managed-services',
+    ];
+
+    $urls = [
+        ['loc' => url('/'), 'changefreq' => 'weekly', 'priority' => '1.0'],
+        ['loc' => url('/about'), 'changefreq' => 'monthly', 'priority' => '0.8'],
+        ['loc' => url('/services'), 'changefreq' => 'weekly', 'priority' => '0.9'],
+    ];
+
+    foreach ($serviceslugs as $slug) {
+        $urls[] = ['loc' => url('/services/' . $slug), 'changefreq' => 'monthly', 'priority' => '0.7'];
+    }
+
+    $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    foreach ($urls as $url) {
+        $xml .= "  <url>\n";
+        $xml .= "    <loc>" . htmlspecialchars($url['loc']) . "</loc>\n";
+        $xml .= "    <changefreq>" . $url['changefreq'] . "</changefreq>\n";
+        $xml .= "    <priority>" . $url['priority'] . "</priority>\n";
+        $xml .= "    <lastmod>" . now()->toDateString() . "</lastmod>\n";
+        $xml .= "  </url>\n";
+    }
+    $xml .= '</urlset>';
+
+    return response($xml, 200)->header('Content-Type', 'application/xml');
+})->name('sitemap');

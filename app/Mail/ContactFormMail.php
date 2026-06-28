@@ -28,12 +28,13 @@ class ContactFormMail extends Mailable
      */
     public function envelope(): Envelope
     {
+        $projectType = $this->data['project_type'] ?? 'General Inquiry';
         return new Envelope(
             from: new Address(
                 config('mail.from.address'),
                 config('mail.from.name')
             ),
-            subject: 'New Contact Form Submission - Aloflux',
+            subject: 'New Project Inquiry: ' . $projectType . ' - Aloflux',
             replyTo: [$this->data['email']],
         );
     }
@@ -48,8 +49,10 @@ class ContactFormMail extends Mailable
             with: [
                 'name' => $this->data['name'],
                 'email' => $this->data['email'],
-                'company' => $this->data['company'] ?? 'Not provided',
-                'messageText' => $this->data['message'],
+                'company' => $this->data['company'] ?? null,
+                'projectType' => $this->data['project_type'],
+                'proposedBudget' => $this->data['proposed_budget'],
+                'projectDescription' => $this->data['project_description'],
             ],
         );
     }

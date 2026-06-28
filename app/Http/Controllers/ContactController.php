@@ -18,7 +18,9 @@ class ContactController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'company' => 'nullable|string|max:255',
-            'message' => 'required|string|max:5000',
+            'project_type' => 'required|string|max:255',
+            'proposed_budget' => 'required|string|max:255',
+            'project_description' => 'required|string|max:5000',
         ]);
 
         if ($validator->fails()) {
@@ -39,6 +41,7 @@ class ContactController extends Controller
                 'to' => $recipientEmail,
                 'from' => $request->email,
                 'name' => $request->name,
+                'project_type' => $request->project_type,
             ]);
 
             return redirect()->route('home')->with('success', 'Thank you for your message! We will get back to you soon.')->withFragment('contact');

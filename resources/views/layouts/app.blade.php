@@ -4,8 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="@yield('meta_description', 'Aloflux - Technology solutions for African markets. Offline-first architectures, enterprise automation, and AI solutions for SMEs in low-connectivity environments.')">
-    <title>@yield('title', 'Aloflux - Technology Solutions for African Markets')</title>
+
+    {{-- Core SEO --}}
+    <title>@yield('title', 'Aloflux - Custom Software, Automation and AI Solutions')</title>
+    <meta name="description" content="@yield('meta_description', 'Aloflux builds custom software, enterprise automation, and AI powered solutions for US and European businesses. High quality engineering at competitive rates.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'custom software development, enterprise automation, AI solutions, offshore software development, Delaware technology company, Laravel development, digital commerce infrastructure, IT managed services')">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Aloflux LLC">
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    {{-- Open Graph --}}
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:site_name" content="Aloflux">
+    <meta property="og:title" content="@yield('og_title', 'Aloflux - Custom Software, Automation and AI Solutions')">
+    <meta property="og:description" content="@yield('og_description', 'Aloflux builds custom software, enterprise automation, and AI powered solutions for US and European businesses. High quality engineering at competitive rates.')">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="@yield('og_image', 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=630&fit=crop')">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+
+    {{-- Twitter Card --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('og_title', 'Aloflux - Custom Software, Automation and AI Solutions')">
+    <meta name="twitter:description" content="@yield('og_description', 'Aloflux builds custom software, enterprise automation, and AI powered solutions for US and European businesses. High quality engineering at competitive rates.')">
+    <meta name="twitter:image" content="@yield('og_image', 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=630&fit=crop')">
+
+    {{-- Organization JSON-LD --}}
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "Organization",
+        "name": "Aloflux LLC",
+        "alternateName": "Aloflux",
+        "url": "{{ url('/') }}",
+        "logo": "{{ url('/') }}/favicon.ico",
+        "description": "Aloflux builds custom software, enterprise automation, and AI powered solutions for US and European businesses.",
+        "address": [
+            {
+                "@@type": "PostalAddress",
+                "addressLocality": "Kampala",
+                "addressCountry": "UG"
+            },
+            {
+                "@@type": "PostalAddress",
+                "addressRegion": "Delaware",
+                "addressCountry": "US"
+            }
+        ],
+        "contactPoint": {
+            "@@type": "ContactPoint",
+            "telephone": "+256758831249",
+            "email": "info@aloflux.com",
+            "contactType": "customer service",
+            "availableLanguage": "English"
+        },
+        "knowsAbout": [
+            "Custom Software Development",
+            "Enterprise Automation",
+            "AI Powered SaaS Solutions",
+            "Digital Commerce Infrastructure",
+            "IT Managed Services",
+            "Offline First Development",
+            "Systems Integration"
+        ],
+        "areaServed": ["US", "EU"]
+    }
+    </script>
+
+    {{-- Page-specific structured data --}}
+    @yield('structured_data')
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +137,7 @@
                         <span class="text-2xl font-bold">Aloflux</span>
                     </div>
                     <p class="text-gray-400 leading-relaxed text-sm">
-                        Building innovative software products and solutions for African markets — from school management to creative platforms and custom development.
+                        We build custom software, enterprise automation, AI powered solutions, and digital commerce infrastructure for businesses in the US and Europe.
                     </p>
                 </div>
 
@@ -122,6 +190,14 @@
                         <li class="flex items-center gap-2">
                             <i class='bx bx-phone text-lg text-[#FF6D00]'></i>
                             <a href="tel:+256758831249" class="hover:text-[#FF6D00] transition-colors">+256 758 831249</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class='bx bx-map text-lg text-[#FF6D00]'></i>
+                            <span>Kampala, Uganda</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class='bx bx-map text-lg text-[#FF6D00]'></i>
+                            <span>Delaware, USA</span>
                         </li>
                     </ul>
                 </div>

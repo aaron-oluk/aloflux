@@ -1,7 +1,26 @@
 @extends('layouts.app')
 
-@section('title', 'Our Services - Aloflux')
-@section('meta_description', 'Aloflux Services - School Management System, Versefountain, Software Development, AI Solutions, Offline-First Development, Systems Integration, Enterprise Automation, Marketing, and more.')
+@section('title', 'Our Services - Custom Software, Automation, AI and Digital Commerce | Aloflux')
+@section('meta_description', 'Aloflux services: custom software development, enterprise automation, AI powered SaaS solutions, digital commerce infrastructure, IT managed services, systems integration, and marketing for US and European businesses.')
+@section('og_title', 'Aloflux Services - Custom Software, Automation and AI Solutions')
+@section('og_description', 'From flagship SaaS products to bespoke enterprise software. Aloflux builds custom software, automation, AI solutions, and digital commerce infrastructure for US and European businesses.')
+
+@section('structured_data')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "CollectionPage",
+    "name": "Aloflux Services",
+    "description": "Custom software development, enterprise automation, AI powered SaaS solutions, digital commerce infrastructure, IT managed services, and marketing for US and European businesses.",
+    "url": "{{ url('/services') }}",
+    "publisher": {
+        "@@type": "Organization",
+        "name": "Aloflux LLC",
+        "url": "{{ url('/') }}"
+    }
+}
+</script>
+@endsection
 
 @php $activePage = 'services'; @endphp
 
@@ -174,7 +193,7 @@
                 <!-- Enterprise Automation -->
                 <div class="group bg-white border border-gray-200 rounded-lg p-6 hover:border-[#FF6D00] hover:shadow-lg transition-all flex items-start gap-5">
                     <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center shrink-0">
-                        <i class='bx bx-bolt text-3xl text-[#FF6D00]'></i>
+                        <i class='bx bx-cog text-3xl text-[#FF6D00]'></i>
                     </div>
                     <div>
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Enterprise Automation</h3>
@@ -246,6 +265,38 @@
                             Improve your search rankings and drive organic traffic with data-driven SEO strategies. Keyword research, technical audits, on-page optimization, and link building.
                         </p>
                         <a href="/services/search-engine-optimization" class="text-[#FF6D00] font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                            Learn more <i class='bx bx-right-arrow-alt text-lg'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Digital Commerce Infrastructure -->
+                <div class="group bg-white border border-gray-200 rounded-lg p-6 hover:border-[#FF6D00] hover:shadow-lg transition-all flex items-start gap-5">
+                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center shrink-0">
+                        <i class='bx bx-store text-3xl text-[#FF6D00]'></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Digital Commerce Infrastructure</h3>
+                        <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                            E-commerce platforms, POS and inventory management systems, payment gateway integrations, and cross-border transaction tooling. We work with Pesapal, DusuPay, SeerBit, Tazapay, and Dodo Payments.
+                        </p>
+                        <a href="/services/digital-commerce" class="text-[#FF6D00] font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                            Learn more <i class='bx bx-right-arrow-alt text-lg'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- IT Managed Services -->
+                <div class="group bg-white border border-gray-200 rounded-lg p-6 hover:border-[#FF6D00] hover:shadow-lg transition-all flex items-start gap-5">
+                    <div class="w-14 h-14 bg-[#FF6D00]/10 rounded-lg flex items-center justify-center shrink-0">
+                        <i class='bx bx-server text-3xl text-[#FF6D00]'></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">IT Managed Services</h3>
+                        <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                            Web hosting, email infrastructure management, domain administration, and IT support for organisations that need reliable managed services without building an in-house IT team.
+                        </p>
+                        <a href="/services/it-managed-services" class="text-[#FF6D00] font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
                             Learn more <i class='bx bx-right-arrow-alt text-lg'></i>
                         </a>
                     </div>

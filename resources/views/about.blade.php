@@ -1,7 +1,26 @@
 @extends('layouts.app')
 
-@section('title', 'About Us - Aloflux')
-@section('meta_description', 'About Aloflux - Technology solutions for African markets. Learn about our mission, vision, and the team behind our innovative solutions.')
+@section('title', 'About Aloflux - Custom Software, Automation and AI Solutions')
+@section('meta_description', 'Aloflux is a technology company building custom software, enterprise automation, and AI powered solutions for US and European businesses. Learn about our mission, values, and approach.')
+@section('og_title', 'About Aloflux')
+@section('og_description', 'We build custom software, enterprise automation, and AI powered solutions for US and European businesses. High quality engineering at competitive rates.')
+
+@section('structured_data')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "AboutPage",
+    "name": "About Aloflux LLC",
+    "description": "Aloflux is a technology company building custom software, enterprise automation, and AI powered solutions for US and European businesses.",
+    "url": "{{ url('/about') }}",
+    "publisher": {
+        "@@type": "Organization",
+        "name": "Aloflux LLC",
+        "url": "{{ url('/') }}"
+    }
+}
+</script>
+@endsection
 
 @php $activePage = 'about'; @endphp
 
@@ -17,7 +36,7 @@
                 Who We Are
             </h1>
             <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-                We are a technology company dedicated to creating innovative software solutions for African markets.
+                We are a technology company dedicated to building custom software, enterprise automation, and AI powered solutions for businesses across the US and Europe.
             </p>
         </div>
     </section>
@@ -42,42 +61,34 @@
                         Our Mission
                     </h2>
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Aloflux is a technology company dedicated to creating innovative software solutions that address the unique challenges faced by businesses in African markets. We understand that connectivity can be unreliable, and we build our solutions with this reality in mind.
+                        Aloflux is a technology company focused on building custom software, enterprise automation, AI powered SaaS solutions, and digital commerce infrastructure for US and European SMEs, startups, and NGOs.
                     </p>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Our mission is to empower small and medium enterprises across Africa with technology that works everywhere — online or offline. We believe that every business deserves access to world-class digital tools, regardless of their connectivity situation.
+                        We are committed to delivering exceptional engineering quality at competitive rates, with a team that communicates clearly and takes full ownership of outcomes. Our clients get more than code — they get a dependable technology partner.
                     </p>
 
-                    <!-- Progress Bars -->
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">School Management System</span>
-                                <span class="text-gray-600 font-semibold">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">Versefountain (Creative Platform)</span>
-                                <span class="text-gray-600 font-semibold">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700 font-semibold">Custom Software Development</span>
-                                <span class="text-gray-600 font-semibold">92%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="bg-[#FF6D00] h-3 rounded-full" style="width: 92%"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class='bx bx-check-circle text-xl text-[#FF6D00] mt-0.5 shrink-0'></i>
+                            <span class="text-gray-700">Custom web applications and enterprise systems built around your business needs</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class='bx bx-check-circle text-xl text-[#FF6D00] mt-0.5 shrink-0'></i>
+                            <span class="text-gray-700">In-house SaaS products: School Management System and Versefountain</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class='bx bx-check-circle text-xl text-[#FF6D00] mt-0.5 shrink-0'></i>
+                            <span class="text-gray-700">Enterprise automation, AI powered tools, and systems integration</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class='bx bx-check-circle text-xl text-[#FF6D00] mt-0.5 shrink-0'></i>
+                            <span class="text-gray-700">Payment gateway integrations and digital commerce infrastructure</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class='bx bx-check-circle text-xl text-[#FF6D00] mt-0.5 shrink-0'></i>
+                            <span class="text-gray-700">IT managed services for CONSENT, FoSCU, and other organisations</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -89,17 +100,17 @@
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Aloflux?</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    We combine deep technical expertise with an understanding of African markets to deliver solutions that truly work.
+                    We combine deep technical expertise with a focus on quality, communication, and long-term partnership.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg p-8 shadow-lg text-center">
                     <div class="w-16 h-16 bg-[#FF6D00]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class='bx bx-globe text-4xl text-[#FF6D00]'></i>
+                        <i class='bx bx-flag text-4xl text-[#FF6D00]'></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">African Market Focus</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">US-Registered Entity</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Our solutions are built from the ground up for the realities of African business environments, including low-connectivity areas.
+                        Aloflux LLC is incorporated in Delaware. Contracts, payments, and legal jurisdiction are structured for US and international clients, giving you the familiarity and protection you expect.
                     </p>
                 </div>
                 <div class="bg-white rounded-lg p-8 shadow-lg text-center">
@@ -108,58 +119,21 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Technical Excellence</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Our team of experienced engineers delivers high-quality, scalable, and maintainable software solutions.
+                        Our experienced engineers deliver high quality, scalable, and maintainable software across web, mobile, and enterprise systems, built to last and easy to hand over.
                     </p>
                 </div>
                 <div class="bg-white rounded-lg p-8 shadow-lg text-center">
                     <div class="w-16 h-16 bg-[#FF6D00]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class='bx bx-support text-4xl text-[#FF6D00]'></i>
+                        <i class='bx bx-dollar-circle text-4xl text-[#FF6D00]'></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Dedicated Support</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Competitive Pricing</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        We provide ongoing support and maintenance to ensure your solutions continue to deliver value long after launch.
+                        We deliver senior level engineering at rates that are significantly more competitive than most Western or Eastern European alternatives, without compromising on output quality.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-
-    {{-- Statistics - commented out
-    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-[#FF6D00]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class='bx bx-check-circle text-4xl text-[#FF6D00]'></i>
-                    </div>
-                    <div class="text-4xl font-bold text-[#1A1A1A] mb-2">500+</div>
-                    <div class="text-gray-600 font-medium">Successful Projects</div>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-[#FF6D00]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class='bx bx-group text-4xl text-[#FF6D00]'></i>
-                    </div>
-                    <div class="text-4xl font-bold text-[#1A1A1A] mb-2">50+</div>
-                    <div class="text-gray-600 font-medium">Expert Team</div>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-[#FF6D00]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class='bx bx-happy text-4xl text-[#FF6D00]'></i>
-                    </div>
-                    <div class="text-4xl font-bold text-[#1A1A1A] mb-2">300+</div>
-                    <div class="text-gray-600 font-medium">Happy Customers</div>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-[#FF6D00]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class='bx bx-time text-4xl text-[#FF6D00]'></i>
-                    </div>
-                    <div class="text-4xl font-bold text-[#1A1A1A] mb-2">8+</div>
-                    <div class="text-gray-600 font-medium">Years of Experience</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    --}}
 
     <!-- CTA Section -->
     <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#FF6D00]">
