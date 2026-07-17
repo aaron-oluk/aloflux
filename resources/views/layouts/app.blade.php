@@ -98,6 +98,7 @@
                     <a href="/" class="{{ $activePage === 'home' ? 'text-[#FF6D00]' : 'text-gray-700 hover:text-[#1A1A1A]' }} font-medium transition-colors">Home</a>
                     <a href="/about" class="{{ $activePage === 'about' ? 'text-[#FF6D00]' : 'text-gray-700 hover:text-[#1A1A1A]' }} font-medium transition-colors">About Us</a>
                     <a href="/services" class="{{ $activePage === 'services' ? 'text-[#FF6D00]' : 'text-gray-700 hover:text-[#1A1A1A]' }} font-medium transition-colors">Services</a>
+                    <a href="/marketplace" class="{{ $activePage === 'marketplace' ? 'text-[#FF6D00]' : 'text-gray-700 hover:text-[#1A1A1A]' }} font-medium transition-colors">Marketplace</a>
                     <a href="/#projects" class="text-gray-700 hover:text-[#1A1A1A] font-medium transition-colors">Projects</a>
                     <a href="/#contact" class="text-gray-700 hover:text-[#1A1A1A] font-medium transition-colors">Contact</a>
                     <a href="/#contact" class="px-6 py-2.5 bg-[#FF6D00] text-white rounded-full font-semibold hover:bg-[#E55A00] transition-colors">
@@ -115,6 +116,7 @@
                 <a href="/" class="block px-4 py-2 {{ $activePage === 'home' ? 'text-[#FF6D00] bg-orange-50 font-semibold' : 'text-gray-700 hover:bg-gray-50' }} rounded-lg">Home</a>
                 <a href="/about" class="block px-4 py-2 {{ $activePage === 'about' ? 'text-[#FF6D00] bg-orange-50 font-semibold' : 'text-gray-700 hover:bg-gray-50' }} rounded-lg">About Us</a>
                 <a href="/services" class="block px-4 py-2 {{ $activePage === 'services' ? 'text-[#FF6D00] bg-orange-50 font-semibold' : 'text-gray-700 hover:bg-gray-50' }} rounded-lg">Services</a>
+                <a href="/marketplace" class="block px-4 py-2 {{ $activePage === 'marketplace' ? 'text-[#FF6D00] bg-orange-50 font-semibold' : 'text-gray-700 hover:bg-gray-50' }} rounded-lg">Marketplace</a>
                 <a href="/#projects" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">Projects</a>
                 <a href="/#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg">Contact</a>
                 <a href="/#contact" class="block px-4 py-2 bg-[#FF6D00] text-white rounded-lg font-semibold text-center">Get A Quote</a>
