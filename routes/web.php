@@ -15,6 +15,10 @@ Route::get('/services', function () {
     return view('services');
 })->name('services');
 
+Route::get('/marketplace', function () {
+    return view('marketplace');
+})->name('marketplace');
+
 Route::get('/services/{slug}', function (string $slug) {
     $services = [
         'ai-solutions' => [
@@ -196,6 +200,7 @@ Route::get('/sitemap.xml', function () {
         ['loc' => url('/'), 'changefreq' => 'weekly', 'priority' => '1.0'],
         ['loc' => url('/about'), 'changefreq' => 'monthly', 'priority' => '0.8'],
         ['loc' => url('/services'), 'changefreq' => 'weekly', 'priority' => '0.9'],
+        ['loc' => url('/marketplace'), 'changefreq' => 'weekly', 'priority' => '0.8'],
     ];
 
     foreach ($serviceslugs as $slug) {
