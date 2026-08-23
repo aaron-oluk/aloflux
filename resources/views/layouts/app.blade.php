@@ -220,6 +220,8 @@
             @yield('scripts')
         @endif
     </script>
+
+    <script defer src="https://analytics.aloflux.com/tracker.js" data-site="aloflux.com"></script>
 </body>
 
 </html>
