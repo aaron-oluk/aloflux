@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
@@ -173,14 +173,16 @@ Route::get('/services/{slug}', function (string $slug) {
         ],
     ];
 
-    if (!isset($services[$slug])) {
+    if (! isset($services[$slug])) {
         abort(404);
     }
 
     return view('service', ['service' => $services[$slug]]);
 })->name('service.show');
 
-Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+Route::post('/contact', [ContactController::class, 'send'])
+    ->middleware('throttle:5,1')
+    ->name('contact.send');
 
 Route::get('/sitemap.xml', function () {
     $serviceslugs = [
@@ -204,17 +206,17 @@ Route::get('/sitemap.xml', function () {
     ];
 
     foreach ($serviceslugs as $slug) {
-        $urls[] = ['loc' => url('/services/' . $slug), 'changefreq' => 'monthly', 'priority' => '0.7'];
+        $urls[] = ['loc' => url('/services/'.$slug), 'changefreq' => 'monthly', 'priority' => '0.7'];
     }
 
-    $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
-    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    $xml = '<?xml version="1.0" encoding="UTF-8"?>'."\n";
+    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'."\n";
     foreach ($urls as $url) {
         $xml .= "  <url>\n";
-        $xml .= "    <loc>" . htmlspecialchars($url['loc']) . "</loc>\n";
-        $xml .= "    <changefreq>" . $url['changefreq'] . "</changefreq>\n";
-        $xml .= "    <priority>" . $url['priority'] . "</priority>\n";
-        $xml .= "    <lastmod>" . now()->toDateString() . "</lastmod>\n";
+        $xml .= '    <loc>'.htmlspecialchars($url['loc'])."</loc>\n";
+        $xml .= '    <changefreq>'.$url['changefreq']."</changefreq>\n";
+        $xml .= '    <priority>'.$url['priority']."</priority>\n";
+        $xml .= '    <lastmod>'.now()->toDateString()."</lastmod>\n";
         $xml .= "  </url>\n";
     }
     $xml .= '</urlset>';
