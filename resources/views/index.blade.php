@@ -503,6 +503,11 @@
             <div class="bg-gray-50 rounded-lg p-8 md:p-12 shadow-lg">
                 <form action="{{ route('contact.send') }}" method="POST" class="space-y-6" id="contact-form">
                     @csrf
+                    <div aria-hidden="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+                        <label for="leave_blank">Leave this field empty</label>
+                        <input type="text" id="leave_blank" name="leave_blank" tabindex="-1" autocomplete="off" value="">
+                    </div>
+                    <input type="hidden" name="form_loaded_at" value="{{ old('form_loaded_at', encrypt((string) now()->timestamp)) }}">
 
                     @if(session('success'))
                         <div class="bg-green-50 text-green-700 px-4 py-3 rounded-lg text-sm font-medium animate-fade-in" id="success-alert">
@@ -512,7 +517,7 @@
 
                     @if(session('error'))
                         <div class="bg-red-50 text-red-700 px-4 py-3 rounded-lg text-sm font-medium animate-fade-in" id="error-alert">
-                            Failed to send your inquiry. Please try again.
+                            {{ session('error') }}
                         </div>
                     @endif
 
@@ -552,15 +557,9 @@
                                 <select id="project_type" name="project_type" required
                                     class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200 appearance-none">
                                     <option value="" disabled {{ old('project_type') ? '' : 'selected' }}>Select a service</option>
-                                    <option value="Custom Software Development" {{ old('project_type') === 'Custom Software Development' ? 'selected' : '' }}>Custom Software Development</option>
-                                    <option value="Enterprise Automation" {{ old('project_type') === 'Enterprise Automation' ? 'selected' : '' }}>Enterprise Automation</option>
-                                    <option value="AI Powered SaaS Solution" {{ old('project_type') === 'AI Powered SaaS Solution' ? 'selected' : '' }}>AI Powered SaaS Solution</option>
-                                    <option value="Digital Commerce Infrastructure" {{ old('project_type') === 'Digital Commerce Infrastructure' ? 'selected' : '' }}>Digital Commerce Infrastructure</option>
-                                    <option value="Systems Integration" {{ old('project_type') === 'Systems Integration' ? 'selected' : '' }}>Systems Integration</option>
-                                    <option value="IT Managed Services" {{ old('project_type') === 'IT Managed Services' ? 'selected' : '' }}>IT Managed Services</option>
-                                    <option value="School Management System" {{ old('project_type') === 'School Management System' ? 'selected' : '' }}>School Management System</option>
-                                    <option value="Marketing or SEO" {{ old('project_type') === 'Marketing or SEO' ? 'selected' : '' }}>Marketing or SEO</option>
-                                    <option value="Other" {{ old('project_type') === 'Other' ? 'selected' : '' }}>Other</option>
+                                    @foreach (\App\Support\ContactForm::PROJECT_TYPES as $type)
+                                        <option value="{{ $type }}" @selected(old('project_type') === $type)>{{ $type }}</option>
+                                    @endforeach
                                 </select>
                             </div>
 
@@ -569,13 +568,9 @@
                                 <select id="proposed_budget" name="proposed_budget" required
                                     class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-gray-900 focus:outline-none focus:ring-0 focus:border-[#FF6D00]/50 transition-all duration-200 appearance-none">
                                     <option value="" disabled {{ old('proposed_budget') ? '' : 'selected' }}>Select a range</option>
-                                    <option value="Discovery Sprint ($1,500 to $3,000)" {{ old('proposed_budget') === 'Discovery Sprint ($1,500 to $3,000)' ? 'selected' : '' }}>Discovery Sprint ($1,500 to $3,000)</option>
-                                    <option value="$3,000 to $8,000" {{ old('proposed_budget') === '$3,000 to $8,000' ? 'selected' : '' }}>$3,000 to $8,000</option>
-                                    <option value="$8,000 to $25,000" {{ old('proposed_budget') === '$8,000 to $25,000' ? 'selected' : '' }}>$8,000 to $25,000</option>
-                                    <option value="$25,000 to $50,000" {{ old('proposed_budget') === '$25,000 to $50,000' ? 'selected' : '' }}>$25,000 to $50,000</option>
-                                    <option value="$50,000 or above" {{ old('proposed_budget') === '$50,000 or above' ? 'selected' : '' }}>$50,000 or above</option>
-                                    <option value="Monthly Retainer (ongoing)" {{ old('proposed_budget') === 'Monthly Retainer (ongoing)' ? 'selected' : '' }}>Monthly Retainer (ongoing)</option>
-                                    <option value="Not sure yet" {{ old('proposed_budget') === 'Not sure yet' ? 'selected' : '' }}>Not sure yet</option>
+                                    @foreach (\App\Support\ContactForm::BUDGETS as $budget)
+                                        <option value="{{ $budget }}" @selected(old('proposed_budget') === $budget)>{{ $budget }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -612,6 +607,17 @@
                     document.getElementById('mobile-menu')?.classList.add('hidden');
                 }
             });
+        });
+
+        document.getElementById('contact-form')?.addEventListener('submit', function () {
+            const button = this.querySelector('button[type="submit"]');
+            if (!button) {
+                return;
+            }
+            window.setTimeout(function () {
+                button.disabled = true;
+                button.textContent = 'Sending';
+            }, 0);
         });
 
         // Handle form submission feedback

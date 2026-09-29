@@ -3,6 +3,8 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Http\Exceptions\ThrottleRequestsException;
+use Illuminate\Http\Request;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -14,5 +16,15 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withExceptions(function (Exceptions $exceptions): void {
-        //
+        $exceptions->render(function (ThrottleRequestsException $exception, Request $request) {
+            if (! $request->routeIs('contact.send')) {
+                return null;
+            }
+
+            return redirect()
+                ->route('home')
+                ->with('error', 'Please wait a moment before sending another message.')
+                ->withInput()
+                ->withFragment('contact');
+        });
     })->create();
